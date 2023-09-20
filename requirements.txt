@@ -8,4 +8,4 @@ speechrecognition==3.8.1
 pydub==0.25.1
 torch==1.10.0
 pip==23.2.1
-tkinter==8.6.11
+tkinter==8.6.13
