@@ -1,5 +1,5 @@
 import streamlit as st
-import tkinter as tk
+import tkinter
 from tkinter import messagebox
 import speech_recognition as sr
 import re
