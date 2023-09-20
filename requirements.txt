@@ -9,4 +9,3 @@ pydub==0.25.1
 torch==1.10.0
 pip==23.2.1
 ffprobe==0.5
-ffmpeg==4.4.2
