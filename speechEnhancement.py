@@ -1,6 +1,6 @@
 import streamlit as st
-# import tkinter as tk
-# from tkinter import messagebox
+import tkinter as tk
+from tkinter import messagebox
 import speech_recognition as sr
 import re
 from pydub import AudioSegment
@@ -40,17 +40,17 @@ def extra_words(text1,text2):
     # print(" ".join(extra_words))
     return " ".join(extra_words)
 
-# def show_popup(score):
-#     root = tk.Tk()
-#     root.withdraw()  # Hide the main tkinter window
-#     if score>=0.7:
-#         messagebox.showinfo("Congratulations!🥳", "🌟🌟🌟🌟🌟\nWell done kid! You completed this level 🎉")
-#     elif score<0.7 and score>=0.5:
-#         messagebox.showinfo("Congratulations!🥳", "⭐⭐⭐⭐Well done kid..........!\t You completed this level 🎉")
-#     elif score<0.5 and score>=0.3:
-#         messagebox.showinfo("Congratulations!🥳", "⭐⭐Well done kid..........!\t You completed this level 🎉")
-#     else:
-#         messagebox.showinfo("Sorry kidd!", " You failed this level 🎉")
+def show_popup(score):
+    root = tk.Tk()
+    root.withdraw()  # Hide the main tkinter window
+    if score>=0.7:
+        messagebox.showinfo("Congratulations!🥳", "🌟🌟🌟🌟🌟\nWell done kid! You completed this level 🎉")
+    elif score<0.7 and score>=0.5:
+        messagebox.showinfo("Congratulations!🥳", "⭐⭐⭐⭐Well done kid..........!\t You completed this level 🎉")
+    elif score<0.5 and score>=0.3:
+        messagebox.showinfo("Congratulations!🥳", "⭐⭐Well done kid..........!\t You completed this level 🎉")
+    else:
+        messagebox.showinfo("Sorry kidd!", " You failed this level 🎉")
 
 st.title("Speech Enhancement")
 st.write("Upload a text file and display its contents.")
@@ -90,7 +90,7 @@ if audio_file:
 
             string2=text
             st.write(Similarity_check(string1,string2))
-            # show_popup(Similarity_check(string1,string2))
+            show_popup(Similarity_check(string1,string2))
 
             st.subheader("Missing words:")
             st.write(missing_words(string1,string2))
