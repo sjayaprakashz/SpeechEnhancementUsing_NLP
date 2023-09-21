@@ -9,7 +9,7 @@ from transformers import BertTokenizer, BertModel
 import torch
 import numpy as np
 import difflib
-
+mediainfo.ffprobe = "/usr/bin/ffprobe"
 def Similarity_check(text1, text2):
     tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
     model = BertModel.from_pretrained("bert-base-uncased")
@@ -62,7 +62,6 @@ audio_file = st.file_uploader("Upload an audio file", type=["mp3", "wav"])
 if audio_file:
     st.audio(audio_file, format="audio/wav")
     r = sr.Recognizer()
-    mediainfo.ffprobe = "/usr/bin/avprobe"
     with st.spinner("Converting audio to text..."):
         try:
             audio_data = AudioSegment.from_file(audio_file)
