@@ -61,6 +61,7 @@ audio_file = st.file_uploader("Upload an audio file", type=["mp3", "wav"])
 
 if audio_file:
     st.audio(audio_file, format="audio/wav")
+    print("hi")
     r = sr.Recognizer()
     with st.spinner("Converting audio to text..."):
         try:
