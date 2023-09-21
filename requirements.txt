@@ -1,5 +1,5 @@
 numpy==1.21.4
-python
+Python
 pickle-mixin==1.0.2
 streamlit
 streamlit-option-menu==0.3.2
