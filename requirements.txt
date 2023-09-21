@@ -1,1 +1,1 @@
-MinDalle
+min_dalle
